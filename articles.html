@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles - Theory House</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/icons/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+         <!-- Identical header content from index.html -->
+         <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/logo/theory-house-logo.png" alt="Theory House Logo" class="logo-image">
+                    <span class="logo-text">Theory House</span>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="articles.html" class="active">Articles</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="index.html#explore">Explore</a></li>
+                </ul>
+            </nav>
+             <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-title-section">
+            <div class="container text-center">
+                <h1 class="page-title fade-in">Articles Archive</h1>
+                <p class="page-subtitle fade-in delay-1">Dive deeper into specific topics</p>
+            </div>
+        </section>
+
+        <section class="article-list">
+            <div class="container">
+                 <!-- Add filters/categories later if needed -->
+                <div class="list-grid">
+                     <!-- Repeat this structure for each article -->
+                     <article class="list-item fade-in-up">
+                         <div class="list-item-content">
+                             <span class="card-category">Complexity</span>
+                             <h2 class="list-item-title"><a href="articles/p-vs-np.html">Demystifying P vs NP</a></h2>
+                             <p class="list-item-excerpt">A high-level overview of computational complexity's most famous unresolved question and its profound implications.</p>
+                             <time class="card-date" datetime="2023-10-27">Recently Added</time>
+                        </div>
+                    </article>
+                     <article class="list-item fade-in-up delay-1">
+                         <div class="list-item-content">
+                            <span class="card-category">Automata</span>
+                            <h2 class="list-item-title"><a href="articles/finite-automata.html">The Elegance of Finite State Machines</a></h2>
+                            <p class="list-item-excerpt">How simple models power complex systems, from compilers and network protocols to simple text editors.</p>
+                            <time class="card-date" datetime="2023-10-25">Recently Added</time>
+                        </div>
+                    </article>
+                     <article class="list-item fade-in-up delay-2">
+                         <div class="list-item-content">
+                            <span class="card-category">Computability</span>
+                            <h2 class="list-item-title"><a href="articles/turing-machines.html">Understanding Turing Machines</a></h2>
+                            <p class="list-item-excerpt">Exploring the abstract model that defines the theoretical limits of what algorithms can possibly compute.</p>
+                            <time class="card-date" datetime="2023-10-22">Recently Added</time>
+                         </div>
+                    </article>
+                    <!-- Add more list items here -->
+                 </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+         <!-- Identical footer content from index.html -->
+          <div class="container footer-container">
+             <div class="footer-logo">
+                  <img src="assets/icons/favicon.png" alt="" class="footer-logo-image"> Theory House
+             </div>
+             <nav class="footer-nav">
+                <a href="index.html">Home</a> |
+                <a href="articles.html">Articles</a> |
+                <a href="community.html">Community</a> |
+                <a href="#">Privacy</a>
+             </nav>
+             <!-- <div class="footer-social">
+                <a href="#" aria-label="Discord Community"><img src="assets/icons/white-favicon.png" alt="Discord"></a>
+             </div> -->
+             <div class="footer-copyright">
+                © <span id="current-year"></span> Theory House. Built with foundational ideas.
+             </div>
+         </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

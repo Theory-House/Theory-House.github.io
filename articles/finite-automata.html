@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Elegance of Finite Automata - Theory House</title>
+     <meta name="description" content="An introduction to finite automata (finite state machines), simple yet powerful models of computation used in lexical analysis, text searching, and more.">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" href="../assets/icons/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="../assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+
+    <!-- MathJax Configuration -->
+    <script>
+        MathJax = {
+          tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] },
+          options: { skipHtmlTags: 'script|noscript|style|textarea|pre' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="article-page">
+     <header class="site-header">
+        <!-- Standard Header -->
+         <div class="container header-container">
+             <div class="logo"> <a href="../index.html"><img src="../assets/logo/theory-house-logo.png" alt="Theory House Logo" class="logo-image"><span class="logo-text">Theory House</span></a></div>
+             <nav class="main-nav"><ul><li><a href="../index.html">Home</a></li><li><a href="../articles.html" class="active">Articles</a></li><li><a href="../community.html">Community</a></li><li><a href="../index.html#explore">Explore</a></li></ul></nav>
+             <button class="mobile-menu-toggle" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+         </div>
+     </header>
+
+    <main>
+        <article class="article-content container">
+            <header class="article-header">
+                <span class="card-category">Automata Theory</span>
+                <h1 class="article-title">The Elegance of Finite Automata</h1>
+                <p class="article-meta">
+                    Published on <time datetime="2023-10-25">October 25, 2023</time>
+                </p>
+                <!-- Optional featured image -->
+            </header>
+
+            <section class="content-body">
+                <p>Imagine a simple machine that can only be in one of a fixed number of states at any given time. It reads an input symbol (like a character from text) and transitions to another state based on its current state and the input symbol. This, in essence, is a Finite Automaton (FA), also known as a Finite State Machine (FSM).</p>
+                <p>Despite their simplicity – they have no memory beyond their current state – finite automata are incredibly useful and form the basis for understanding more complex computational models.</p>
+
+                <h2>Components of a Finite Automaton</h2>
+                <p>Formally, a deterministic finite automaton (DFA) is defined by five components:</p>
+                <ol>
+                    <li>$Q$: A finite set of states.</li>
+                    <li>$\Sigma$: A finite set of input symbols, called the alphabet.</li>
+                    <li>$\delta$: The transition function, which takes a state and an input symbol and returns the next state ($\delta: Q \times \Sigma \rightarrow Q$).</li>
+                    <li>$q_0$: The initial state (must be one of the states in $Q$).</li>
+                    <li>$F$: A set of accept (or final) states (a subset of $Q$).</li>
+                </ol>
+                <p>We often visualize FAs using state diagrams: circles represent states, arrows represent transitions labeled with input symbols, an arrow points to the start state, and double circles indicate accept states.</p>
+
+                <h2>How They Work: Recognizing Languages</h2>
+                <p>A primary use of FAs is to recognize "regular languages". A language, in this context, is simply a set of strings (sequences of symbols from the alphabet). An FA "accepts" a string if, starting from the initial state $q_0$ and following the transitions dictated by the symbols in the string, the machine ends up in one of the accept states $F$. Otherwise, it "rejects" the string.</p>
+                <p>For example, you can design a simple FA to recognize strings that represent binary numbers divisible by 3, or strings that contain the substring "ing".</p>
+
+                <h2>Applications</h2>
+                <p>Finite Automata might seem abstract, but they have many practical applications:</p>
+                <ul>
+                    <li><strong>Lexical Analysis:</strong> Compilers use FAs to break down source code into tokens (keywords, identifiers, operators).</li>
+                    <li><strong>Text Searching:</strong> Algorithms like Knuth-Morris-Pratt use FA principles for efficient pattern matching (finding a word in a large document).</li>
+                    <li><strong>Network Protocols:</strong> State machines model the different stages of a network connection (e.g., establishing, connected, closing).</li>
+                    <li><strong>Hardware Design:</strong> Simple controllers in digital circuits can be implemented as FSMs.</li>
+                    <li><strong>Simple AI:</strong> Basic behaviors in games or robotics can be controlled by state machines.</li>
+                </ul>
+
+                <h2>Limitations</h2>
+                <p>The key limitation of FAs is their finite memory – they cannot count indefinitely. They cannot, for example, recognize the language consisting of strings with an equal number of 'a's and 'b's ($a^n b^n$), because they can't keep track of how many 'a's they've seen to match them with 'b's.</p>
+                <p>Despite this, their simplicity, efficiency, and wide applicability make Finite Automata a cornerstone of theoretical computer science and a valuable tool in practice.</p>
+            </section>
+
+             <nav class="article-footer-nav">
+                 <a href="../articles.html" class="link-styled">&larr; Back to All Articles</a>
+            </nav>
+        </article>
+    </main>
+
+    
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-logo">
+                 <img src="../assets/icons/favicon.png" alt="" class="footer-logo-image"> Theory House
+            </div>
+            <nav class="footer-nav">
+                <a href="index.html">Home</a> |
+                <a href="articles.html">Articles</a> |
+                <a href="community.html">Community</a> |
+                <!-- Add Policy/Terms links -->
+                <a href="#">Privacy</a>
+            </nav>
+            <!-- <div class="footer-social">
+                 Add actual links -->
+                <!-- <a href="#" aria-label="Discord Community"><img src="assets/icons/white-favicon.png" alt="Discord"></a> -->
+                <!-- <a href="#" aria-label="Twitter"><img src="assets/icons/twitter-icon.svg" alt="Twitter"></a> -->
+                <!-- <a href="#" aria-label="GitHub"><img src="assets/icons/github-icon.svg" alt="GitHub"></a> -->
+            <!-- </div> --> 
+            <div class="footer-copyright">
+                © <span id="current-year"></span> Theory House. Built with foundational ideas.
+            </div>
+        </div>
+    </footer>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

@@ -125,32 +125,61 @@ section { padding: 60px 0; } /* Standard section padding */
     .mobile-menu-toggle.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 }
 
-/* --- Hero Section --- */
+/* --- Hero Section (with Subtle Node Grid background) --- */
 .hero-section {
-    padding: 100px 0; /* More padding */
-    background-color: var(--color-background-light);
-    position: relative; overflow: hidden;
+    padding: 100px 0;
+    background-color: var(--color-background-light); /* Base color */
+    position: relative;
+    overflow: hidden;
     text-align: center;
+    color: var(--color-primary); /* Ensure text is readable */
 }
-/* Creative background idea - subtle nodes */
+
+/* Background Pattern */
 .hero-section::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-    /* background-image: radial-gradient(var(--color-border) 1px, transparent 1px); */
-    background-image: /* Simulating nodes and faint connections */
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    /* Simulating nodes and faint connections */
+    background-image:
         radial-gradient(circle at 10% 20%, var(--color-border) 1px, transparent 1px),
         radial-gradient(circle at 80% 30%, var(--color-border) 1px, transparent 1px),
         radial-gradient(circle at 30% 80%, var(--color-border) 1px, transparent 1px),
         radial-gradient(circle at 90% 70%, var(--color-border) 1px, transparent 1px);
-    background-size: 100px 100px; /* Adjust size/density */
-    opacity: 0.5;
-    z-index: 0;
-    animation: bg-pan 20s linear infinite; /* Subtle pan */
+    background-size: 100px 100px; /* Size/density of the pattern */
+    opacity: 0.5; /* Subtlety control */
+    z-index: 0; /* Behind content */
+    animation: bg-pan 40s linear infinite; /* Slow pan animation */
 }
-@keyframes bg-pan { 0% { background-position: 0% 0%; } 100% { background-position: 100% 100%; } }
 
-.hero-section .container { position: relative; z-index: 1; }
-.hero-title { margin-bottom: 0.5em; line-height: 1.2; }
-.hero-subtitle { font-size: 1.2rem; color: #555; margin-bottom: 2em; max-width: 600px; margin-left: auto; margin-right: auto; }
+/* Keep content above the pseudo-element */
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Background animation */
+@keyframes bg-pan {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; } /* Diagonal pan */
+}
+
+/* Hero Text styling */
+.hero-title {
+    color: var(--color-primary); /* Ensure contrast */
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+}
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #555; /* Darker grey for readability */
+    margin-bottom: 2em;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* --- End Hero Section --- */
+
 
 /* --- Buttons & Links --- */
 .cta-button {
@@ -259,7 +288,7 @@ section { padding: 60px 0; } /* Standard section padding */
 .footer-nav a { color: #aaa; margin: 0 10px; text-decoration: none; }
 .footer-nav a:hover { color: var(--color-secondary); text-decoration: underline; }
 .footer-social { display: flex; gap: 15px; margin-bottom: 15px; }
-.footer-social img { height: 24px; width: 24px; filter: grayscale(1) brightness(1.5); transition: filter var(--transition-speed) ease;}
+.footer-social img { height: 50px; width: 50px; filter: grayscale(1) brightness(1.5); transition: filter var(--transition-speed) ease;} /* Increased size */
 .footer-social a:hover img { filter: grayscale(0) brightness(1); }
 .footer-copyright { color: #888; font-size: 0.85rem; }
 

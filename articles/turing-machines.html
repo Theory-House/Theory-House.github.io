@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Turing Machines - Theory House</title>
+    <meta name="description" content="An introduction to the Turing machine, a foundational abstract model defining the theoretical limits of computation.">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" href="../assets/icons/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="../assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+
+    <!-- MathJax Configuration -->
+    <script>
+        MathJax = {
+          tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] },
+          options: { skipHtmlTags: 'script|noscript|style|textarea|pre' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="article-page">
+    <header class="site-header">
+        <!-- Standard Header -->
+        <div class="container header-container">
+            <div class="logo"> <a href="../index.html"><img src="../assets/logo/theory-house-logo.png" alt="Theory House Logo" class="logo-image"><span class="logo-text">Theory House</span></a></div>
+            <nav class="main-nav"><ul><li><a href="../index.html">Home</a></li><li><a href="../articles.html" class="active">Articles</a></li><li><a href="../community.html">Community</a></li><li><a href="../index.html#explore">Explore</a></li></ul></nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <main>
+        <article class="article-content container">
+            <header class="article-header">
+                <span class="card-category">Computability Theory</span>
+                <h1 class="article-title">Understanding Turing Machines</h1>
+                <p class="article-meta">
+                    Published on <time datetime="2023-10-22">October 22, 2023</time>
+                </p>
+                <!-- Optional featured image -->
+            </header>
+
+            <section class="content-body">
+                <p>What does it mean for a problem to be "computable"? Can any mathematical function be calculated by a mechanical process? To answer these fundamental questions, Alan Turing, in 1936, conceived an abstract theoretical model of computation now known as the Turing machine.</p>
+                <p>It's not a physical machine but rather a mathematical construct designed to capture the essence of algorithmic computation. Its power lies in its simplicity and its surprising universality.</p>
+
+                <h2>Components of a Turing Machine</h2>
+                <p>A standard Turing machine consists of:</p>
+                <ul>
+                    <li>An infinite <strong>tape</strong> divided into cells. Each cell can hold a symbol from a finite alphabet (including a special blank symbol).</li>
+                    <li>A <strong>read/write head</strong> that can move left or right along the tape, one cell at a time. It can read the symbol in the current cell and write a new symbol over it.</li>
+                    <li>A finite set of <strong>states</strong>, representing the machine's internal configuration.</li>
+                    <li>A <strong>transition function</strong> (or program) that dictates the machine's behavior. Based on the current state and the symbol read from the tape, the function specifies:
+                        <ol>
+                            <li>The symbol to write on the current tape cell.</li>
+                            <li>Whether the head should move left (L) or right (R).</li>
+                            <li>The next state to transition into.</li>
+                        </ol>
+                    </li>
+                    <li>A designated <strong>start state</strong> and one or more <strong>halt states</strong> (often accept/reject states for decision problems).</li>
+                </ul>
+                <p>The machine starts in the initial state with the input written on the tape, surrounded by blanks. It then follows the transition function step-by-step until it enters a halt state, at which point the computation ends. The content of the tape at halt might represent the result.</p>
+
+                <h2>The Church-Turing Thesis</h2>
+                <p>The central idea related to Turing machines is the Church-Turing Thesis. It's not a mathematical theorem but a widely accepted hypothesis stating that:</p>
+                <blockquote>
+                    Any function that can be computed by an algorithm (any "effectively calculable" function) can be computed by a Turing machine.
+                </blockquote>
+                <p>In essence, it proposes that the Turing machine model fully captures our intuitive notion of what an algorithm is. No computational model proposed since (including modern digital computers) has been shown to be capable of computing functions that a Turing machine cannot. While they might be faster or more convenient, they are not fundamentally more powerful in terms of *what* they can compute.</p>
+
+                <h2>Significance and Limitations</h2>
+                <p>Turing machines are foundational for several reasons:</p>
+                <ul>
+                    <li><strong>Defining Computability:</strong> They provide a precise mathematical definition of what problems are solvable by algorithms.</li>
+                    <li><strong>The Halting Problem:</strong> Turing proved that there exists no general algorithm (no Turing machine) that can determine, for an arbitrary program and input, whether that program will eventually halt or run forever. This demonstrated inherent limits to computation.</li>
+                    <li><strong>Complexity Theory Basis:</strong> Concepts like time and space complexity are often analyzed in terms of the resources used by a Turing machine.</li>
+                    <li><strong>Universality:</strong> Turing showed the existence of a Universal Turing Machine (UTM) that can simulate any other specific Turing machine given its description and input on the tape. This is the theoretical precursor to modern stored-program computers.</li>
+                </ul>
+                <p>While not practical for building real computers, the Turing machine remains the definitive theoretical benchmark for exploring the capabilities and limits of algorithmic computation.</p>
+            </section>
+
+            <nav class="article-footer-nav">
+                 <a href="../articles.html" class="link-styled">&larr; Back to All Articles</a>
+            </nav>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-logo">
+                 <img src="../assets/icons/favicon.png" alt="" class="footer-logo-image"> Theory House
+            </div>
+            <nav class="footer-nav">
+                <a href="index.html">Home</a> |
+                <a href="articles.html">Articles</a> |
+                <a href="community.html">Community</a> |
+                <!-- Add Policy/Terms links -->
+                <a href="#">Privacy</a>
+            </nav>
+            <!-- <div class="footer-social">
+                 Add actual links -->
+                <!-- <a href="#" aria-label="Discord Community"><img src="assets/icons/white-favicon.png" alt="Discord"></a> -->
+                <!-- <a href="#" aria-label="Twitter"><img src="assets/icons/twitter-icon.svg" alt="Twitter"></a> -->
+                <!-- <a href="#" aria-label="GitHub"><img src="assets/icons/github-icon.svg" alt="GitHub"></a> -->
+            <!-- </div> --> 
+            <div class="footer-copyright">
+                © <span id="current-year"></span> Theory House. Built with foundational ideas.
+            </div>
+        </div>
+    </footer>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

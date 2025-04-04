@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demystifying P vs NP - Theory House</title>
+    <meta name="description" content="An introduction to the P versus NP problem, one of the biggest unsolved questions in computer science and mathematics.">
+    <link rel="stylesheet" href="../assets/css/style.css"> <!-- Correct path -->
+    <link rel="icon" href="../assets/icons/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="../assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+
+    <!-- MathJax Configuration -->
+    <script>
+        MathJax = {
+          tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] },
+          options: { skipHtmlTags: 'script|noscript|style|textarea|pre' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="article-page">
+    <header class="site-header">
+        <!-- Standard Header (ensure paths are correct) -->
+        <div class="container header-container">
+             <div class="logo">
+                 <a href="../index.html">
+                    <img src="../assets/logo/theory-house-logo.png" alt="Theory House Logo" class="logo-image">
+                    <span class="logo-text">Theory House</span>
+                 </a>
+             </div>
+             <nav class="main-nav">
+                 <ul>
+                     <li><a href="../index.html">Home</a></li>
+                     <li><a href="../articles.html" class="active">Articles</a></li>
+                     <li><a href="../community.html">Community</a></li>
+                     <li><a href="../index.html#explore">Explore</a></li>
+                 </ul>
+             </nav>
+              <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                 <span></span><span></span><span></span>
+             </button>
+         </div>
+    </header>
+
+    <main>
+        <article class="article-content container">
+            <header class="article-header">
+                <span class="card-category">Complexity Theory</span>
+                <h1 class="article-title">Demystifying the P vs NP Problem</h1>
+                <p class="article-meta">
+                    Published on <time datetime="2023-10-27">October 27, 2023</time>
+                </p>
+                <!-- Optional featured image placeholder -->
+            </header>
+
+            <section class="content-body">
+                <p>Imagine you have a task. If it's easy to <em>check</em> if a proposed solution is correct, does that mean the task is also easy to <em>solve</em> in the first place? This is the essence of the P versus NP problem, one of the seven Millennium Prize Problems, with a million-dollar reward for its solution.</p>
+
+                <h2>What is P?</h2>
+                <p>In complexity theory, $P$ stands for "Polynomial time". This is a class of decision problems (problems with a yes/no answer) that can be solved quickly by a deterministic algorithm. "Quickly" here means the time it takes to solve the problem grows as a polynomial function of the size of the input.</p>
+                <p>Think about tasks like:</p>
+                <ul>
+                    <li>Sorting a list of numbers.</li>
+                    <li>Checking if a number is prime (proven to be in P in 2002).</li>
+                    <li>Finding the shortest path between two points in a network (like GPS navigation).</li>
+                </ul>
+                <p>These are generally considered "easy" or "efficiently solvable" problems by computers, even for large inputs.</p>
+
+                <h2>What is NP?</h2>
+                <p>$NP$ stands for "Nondeterministic Polynomial time". This class contains decision problems for which a proposed solution (a "certificate" or "witness") can be <em>verified</em> quickly (in polynomial time).</p>
+                <p>Crucially, this doesn't say anything about how hard it is to <em>find</em> the solution. It just says that if someone gives you a potential answer, you can check if it's correct efficiently.</p>
+                <p>Examples of problems widely believed to be in NP (but not known to be in P) include:</p>
+                <ul>
+                    <li><strong>Boolean Satisfiability (SAT):</strong> Given a logical formula, is there an assignment of TRUE/FALSE values to variables that makes the whole formula TRUE?</li>
+                    <li><strong>Traveling Salesperson Problem (Decision Version):</strong> Given a list of cities and distances, is there a route visiting each city exactly once that is shorter than a given length K?</li>
+                    <li><strong>Sudoku (Generalized):</strong> Can a partially filled n x n grid be completed according to Sudoku rules? (Checking a completed grid is easy).</li>
+                </ul>
+
+                <h2>The Big Question: Does P = NP?</h2>
+                <p>The P vs NP question asks: Is the class P actually the same as the class NP? In other words, if a solution can be verified quickly, can it also be found quickly?</p>
+                <p>Intuitively, it feels like verifying should be easier than finding. It's easy to check if a Sudoku solution is correct, but finding it can be very hard. Most computer scientists believe that $P \neq NP$, meaning there are problems in NP that are fundamentally harder to solve than to verify.</p>
+                <p>However, no one has been able to prove it. Proving $P = NP$ would mean finding efficient algorithms for thousands of currently hard problems, revolutionizing fields like cryptography, optimization, AI, and logistics. Proving $P \neq NP$ would confirm our intuition that some problems are inherently difficult and likely require heuristic or approximation approaches rather than exact, fast solutions.</p>
+
+                <h2>Why Does It Matter?</h2>
+                <p>The answer impacts the foundations of computer science, mathematics, and many practical applications. For example, much of modern cryptography relies on the assumption that certain problems (like factoring large numbers, related to NP) are hard to solve quickly. If $P=NP$, these cryptographic systems could potentially be broken.</p>
+                <p>While a proof remains elusive, understanding the P vs NP problem helps us categorize computational problems and guides our approach to solving them.</p>
+
+            </section>
+
+            <nav class="article-footer-nav">
+                 <a href="../articles.html" class="link-styled">&larr; Back to All Articles</a>
+            </nav>
+
+        </article>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-logo">
+                 <img src="../assets/icons/favicon.png" alt="" class="footer-logo-image"> Theory House
+            </div>
+            <nav class="footer-nav">
+                <a href="index.html">Home</a> |
+                <a href="articles.html">Articles</a> |
+                <a href="community.html">Community</a> |
+                <!-- Add Policy/Terms links -->
+                <a href="#">Privacy</a>
+            </nav>
+            <!-- <div class="footer-social">
+                 Add actual links -->
+                <!-- <a href="#" aria-label="Discord Community"><img src="assets/icons/white-favicon.png" alt="Discord"></a> -->
+                <!-- <a href="#" aria-label="Twitter"><img src="assets/icons/twitter-icon.svg" alt="Twitter"></a> -->
+                <!-- <a href="#" aria-label="GitHub"><img src="assets/icons/github-icon.svg" alt="GitHub"></a> -->
+            <!-- </div> --> 
+            <div class="footer-copyright">
+                © <span id="current-year"></span> Theory House. Built with foundational ideas.
+            </div>
+        </div>
+    </footer>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
