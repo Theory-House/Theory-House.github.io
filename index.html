@@ -3,159 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Theory House - Exploring the Foundations of Computation</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Favicon Link (replace with your actual favicon file) -->
-    <link rel="icon" href="img/Phi_Transperant.png" type="image/png">
-    <!-- Google Fonts (Example: Raleway and Open Sans) -->
+    <title>Theory House</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/icons/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <!-- Example Fonts (Adjust as needed) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
-
-    <!-- Placeholder for MathJax/KaTeX if needed later
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header class="site-header">
         <div class="container header-container">
             <div class="logo">
-                <!-- Replace logo.png with the actual path to your logo image -->
                 <a href="index.html">
-                    <img src="img/Logo_No_Text_Theory_House.png" alt="Theory House Logo" class="logo-image">
+                    <img src="assets/logo/theory-house-logo.png" alt="Theory House Logo" class="logo-image">
                     <span class="logo-text">Theory House</span>
                 </a>
             </div>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#articles">Articles</a></li>
-                    <li><a href="#topics">Topics</a></li>
-                    <li><a href="#resources">Resources</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="#explore">Explore</a></li>
+                    <!-- Add About/Resources later -->
                 </ul>
             </nav>
-            <!-- Add a button for mobile menu if needed later -->
-            <!-- <button class="mobile-menu-toggle">Menu</button> -->
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section id="home" class="hero-section">
+        <section class="hero-section">
+            <!-- Subtle animated background (can be added via CSS pseudo-element) -->
             <div class="container text-center">
-                <!-- Optional: Subtle background pattern using the logo motif -->
-                <h1 class="hero-title">Exploring the Foundations of Computation</h1>
-                <p class="hero-subtitle">Where Theoretical Computer Science Connects and Concepts Crystallize.</p>
-                <a href="#articles" class="cta-button">Discover Insights</a>
+                <h1 class="hero-title fade-in">Foundations.<br>Connections.<br>Computation.</h1>
+                <p class="hero-subtitle fade-in delay-1">Welcome to Theory House, your space for exploring the core concepts of Theoretical Computer Science.</p>
+                <a href="articles.html" class="cta-button fade-in delay-2">Start Exploring →</a>
             </div>
+             <!-- Optional decorative graphic element -->
+            <div class="hero-graphic"></div>
         </section>
 
         <!-- Featured Articles Section -->
-        <section id="articles" class="featured-articles">
+        <section class="featured-articles">
             <div class="container">
-                <h2 class="section-title">Featured Insights</h2>
+                <h2 class="section-title fade-in-up">Latest Insights</h2>
                 <div class="card-grid">
-                    <!-- Article Card 1 -->
-                    <article class="card">
-                        <!-- Use abstract graphics or diagrams here -->
-                        <!-- <img src="images/article1-thumb.png" alt="Abstract representation of P vs NP"> -->
+                    <!-- Card 1 -->
+                    <article class="card fade-in-up">
                         <div class="card-content">
-                            <h3 class="card-title">Understanding P vs NP</h3>
-                            <p class="card-excerpt">A brief dive into one of the most profound open questions in computer science and mathematics.</p>
-                            <a href="article-p-vs-np.html" class="card-link">Read More →</a>
+                            <span class="card-category">Complexity</span>
+                            <h3 class="card-title"><a href="articles/sample-article.html">Demystifying P vs NP</a></h3>
+                            <p class="card-excerpt">A high-level overview of computational complexity's most famous unresolved question.</p>
+                            <time class="card-date" datetime="2023-10-27">October 27, 2023</time>
                         </div>
                     </article>
-                    <!-- Article Card 2 -->
-                    <article class="card">
-                        <div class="card-content">
-                            <h3 class="card-title">The Power of Finite Automata</h3>
-                            <p class="card-excerpt">Exploring the surprisingly versatile applications of simple computational models.</p>
-                            <a href="article-automata.html" class="card-link">Read More →</a>
+                    <!-- Card 2 -->
+                    <article class="card fade-in-up delay-1">
+                         <div class="card-content">
+                            <span class="card-category">Automata</span>
+                            <h3 class="card-title"><a href="articles/sample-article.html">The Elegance of Finite State Machines</a></h3>
+                            <p class="card-excerpt">How simple models power complex systems, from compilers to text editors.</p>
+                            <time class="card-date" datetime="2023-10-25">October 25, 2023</time>
                         </div>
                     </article>
-                    <!-- Article Card 3 -->
-                    <article class="card">
-                        <div class="card-content">
-                            <h3 class="card-title">Lambda Calculus Essentials</h3>
-                            <p class="card-excerpt">Grasping the core concepts of this foundational model for computation.</p>
-                            <a href="article-lambda.html" class="card-link">Read More →</a>
+                    <!-- Card 3 -->
+                    <article class="card fade-in-up delay-2">
+                         <div class="card-content">
+                            <span class="card-category">Computability</span>
+                            <h3 class="card-title"><a href="articles/sample-article.html">Understanding Turing Machines</a></h3>
+                            <p class="card-excerpt">Exploring the theoretical limits of what algorithms can compute.</p>
+                            <time class="card-date" datetime="2023-10-22">October 22, 2023</time>
                         </div>
                     </article>
                 </div>
-                <div class="text-center section-cta">
-                    <a href="all-articles.html" class="cta-button secondary">View All Articles</a>
+                <div class="text-center section-cta fade-in-up">
+                    <a href="articles.html" class="link-styled">View All Articles</a>
                 </div>
             </div>
         </section>
 
-        <!-- Core Topics Section -->
-        <section id="topics" class="core-topics">
+        <!-- Explore Areas Section -->
+        <section id="explore" class="explore-areas">
             <div class="container">
-                <h2 class="section-title">Core Topic Areas</h2>
-                <div class="topic-grid">
-                    <!-- Use icons or subtle node graphics for topics -->
-                    <div class="topic-item">
-                        <span class="topic-icon"></span> <!-- Placeholder for icon -->
-                        <h3 class="topic-title">Algorithms & Data Structures</h3>
-                    </div>
-                    <div class="topic-item">
-                        <span class="topic-icon"></span>
-                        <h3 class="topic-title">Complexity Theory</h3>
-                    </div>
-                    <div class="topic-item">
-                        <span class="topic-icon"></span>
-                        <h3 class="topic-title">Automata & Formal Languages</h3>
-                    </div>
-                    <div class="topic-item">
-                        <span class="topic-icon"></span>
-                        <h3 class="topic-title">Computability Theory</h3>
-                    </div>
-                     <div class="topic-item">
-                        <span class="topic-icon"></span>
-                        <h3 class="topic-title">Cryptography</h3>
-                    </div>
-                     <div class="topic-item">
-                        <span class="topic-icon"></span>
-                        <h3 class="topic-title">Quantum Computing</h3>
-                    </div>
-                </div>
+                <h2 class="section-title fade-in-up">Explore Core Areas</h2>
+                 <div class="topic-grid">
+                    <a href="#" class="topic-card fade-in-up">
+                        <div class="topic-icon node"></div>
+                        <h3 class="topic-title">Algorithms</h3>
+                        <p>Design & Analysis</p>
+                    </a>
+                    <a href="#" class="topic-card fade-in-up delay-1">
+                        <div class="topic-icon node"></div>
+                        <h3 class="topic-title">Complexity</h3>
+                        <p>P vs NP & Beyond</p>
+                    </a>
+                     <a href="#" class="topic-card fade-in-up delay-2">
+                         <div class="topic-icon node"></div>
+                        <h3 class="topic-title">Automata</h3>
+                        <p>Formal Languages</p>
+                    </a>
+                    <a href="#" class="topic-card fade-in-up delay-3">
+                         <div class="topic-icon node"></div>
+                        <h3 class="topic-title">Logic</h3>
+                        <p>Proofs & Computation</p>
+                    </a>
+                 </div>
             </div>
         </section>
 
-        <!-- About Snippet -->
-        <section id="about" class="about-snippet">
-             <div class="container">
-                <h2 class="section-title">About Theory House</h2>
-                <p>Theory House is dedicated to making the fundamental principles of theoretical computer science accessible and engaging. We believe in clarity, rigor, and fostering a deeper understanding of the mathematical underpinnings of computation.</p>
-                <a href="about.html" class="cta-button secondary">Learn More About Us</a>
-             </div>
+        <!-- Community Call to Action -->
+        <section class="community-cta">
+             <div class="container text-center fade-in-up">
+                <h2 class="section-title light">Connect & Discuss</h2>
+                <p>Join the conversation, ask questions, and share insights with fellow TCS enthusiasts.</p>
+                <a href="community.html" class="cta-button secondary">Join the Community</a>
+            </div>
         </section>
 
     </main>
 
-    <footer id="contact" class="site-footer">
+    <footer class="site-footer">
         <div class="container footer-container">
             <div class="footer-logo">
-                 <!-- You can reuse the logo here or just text -->
-                 Theory House
+                 <img src="assets/logo/theory-house-logo.png" alt="" class="footer-logo-image"> Theory House
             </div>
-            <div class="footer-nav">
-                <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a> | <a href="contact.html">Contact</a>
-            </div>
+            <nav class="footer-nav">
+                <a href="index.html">Home</a> |
+                <a href="articles.html">Articles</a> |
+                <a href="community.html">Community</a> |
+                <!-- Add Policy/Terms links -->
+                <a href="#">Privacy</a>
+            </nav>
             <div class="footer-social">
-                <!-- Add social media links/icons if applicable -->
-                <!-- <a href="#">Twitter</a> <a href="#">GitHub</a> -->
+                <!-- Add actual links -->
+                <a href="#" aria-label="Discord Community"><img src="assets/icons/discord-icon.svg" alt="Discord"></a>
+                <!-- <a href="#" aria-label="Twitter"><img src="assets/icons/twitter-icon.svg" alt="Twitter"></a> -->
+                <!-- <a href="#" aria-label="GitHub"><img src="assets/icons/github-icon.svg" alt="GitHub"></a> -->
             </div>
             <div class="footer-copyright">
-                © <span id="current-year"></span> Theory House. All Rights Reserved.
+                © <span id="current-year"></span> Theory House. Built with foundational ideas.
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

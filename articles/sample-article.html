@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Update Title for each article -->
+    <title>Sample Article Title - Theory House</title>
+    <link rel="stylesheet" href="../assets/css/style.css"> <!-- Note the path back up -->
+    <link rel="icon" href="../assets/icons/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="../assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+
+    <!-- MathJax Configuration (Example) -->
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
+            processEscapes: true,
+            processEnvironments: true
+          },
+          options: {
+            skipHtmlTags: 'script|noscript|style|textarea|pre'
+          }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="article-page"> <!-- Class for specific article styling -->
+    <header class="site-header">
+        <!-- Identical header content -->
+        <div class="container header-container">
+             <div class="logo">
+                <!-- Update path back to index -->
+                 <a href="../index.html">
+                    <!-- Update path for logo -->
+                    <img src="../assets/logo/theory-house-logo.png" alt="Theory House Logo" class="logo-image">
+                    <span class="logo-text">Theory House</span>
+                 </a>
+             </div>
+             <nav class="main-nav">
+                 <ul>
+                     <li><a href="../index.html">Home</a></li>
+                     <!-- Update paths back up -->
+                     <li><a href="../articles.html" class="active">Articles</a></li>
+                     <li><a href="../community.html">Community</a></li>
+                     <li><a href="../index.html#explore">Explore</a></li>
+                 </ul>
+             </nav>
+              <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                 <span></span>
+                 <span></span>
+                 <span></span>
+             </button>
+         </div>
+    </header>
+
+    <main>
+        <article class="article-content container">
+            <header class="article-header">
+                <!-- === ARTICLE CONTENT STARTS HERE === -->
+
+                <span class="card-category">Topic Category</span>
+                <h1 class="article-title">Your Engaging Article Title Here</h1>
+                <p class="article-meta">
+                    Published on <time datetime="YYYY-MM-DD">Month DD, YYYY</time>
+                    <!-- | By Author Name -->
+                </p>
+                <figure class="featured-image">
+                    <!-- Optional: Add a relevant diagram or image -->
+                    <!-- <img src="../assets/images/your-diagram.png" alt="Descriptive alt text"> -->
+                    <!-- <figcaption>Optional caption for the image</figcaption> -->
+                </figure>
+            </header>
+
+            <section class="content-body">
+                <p>This is the introductory paragraph. Briefly set the stage for the topic you are about to discuss. Engage the reader and explain why this concept is important or interesting in Theoretical Computer Science.</p>
+
+                <h2>First Main Section</h2>
+                <p>Use clear headings to structure your content. Explain concepts step-by-step. Define terms clearly. For example, when discussing complexity classes, you might mention $P$ and $NP$.</p>
+                <p>Inline math can be included using single dollar signs: $E=mc^2$. For display math (equations on their own line), use double dollar signs:</p>
+                $$ \sum_{i=1}^{n} i = \frac{n(n+1)}{2} $$
+                <p>Or use `\[ ... \]`:</p>
+                \[ \mathcal{L} = \{ w \in \{0,1\}^* \mid w \text{ has an equal number of 0s and 1s} \} \]
+
+                <h3>Subsection Example</h3>
+                <p>Break down complex ideas into smaller, manageable parts using subheadings. Provide examples where possible.</p>
+
+                <h2>Code Examples</h2>
+                <p>Use `pre` and `code` tags for code blocks. You might need a syntax highlighting library (like Prism.js) integrated via JS for better styling.</p>
+                <pre><code class="language-python"># Example Python code
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+result = factorial(5)
+print(f"The factorial of 5 is: {result}")
+                </code></pre>
+
+                <h2>Lists and Structure</h2>
+                <p>Use lists to enumerate points:</p>
+                <ul>
+                    <li>Point one about automata.</li>
+                    <li>Point two about language recognition.</li>
+                    <li>Point three demonstrating a concept.</li>
+                </ul>
+                <p>Ordered lists can show steps:</p>
+                <ol>
+                    <li>Define the states $Q$.</li>
+                    <li>Define the alphabet $\Sigma$.</li>
+                    <li>Define the transition function $\delta$.</li>
+                    <li>Define the start state $q_0$.</li>
+                    <li>Define the set of accept states $F$.</li>
+                </ol>
+
+                <h2>Concluding Thoughts</h2>
+                <p>Summarize the key takeaways from the article. You might pose further questions, suggest related topics for exploration, or reiterate the significance of the concept discussed.</p>
+
+                 <!-- === ARTICLE CONTENT ENDS HERE === -->
+            </section>
+
+            <!-- Optional: Navigation back to articles list or related articles -->
+             <nav class="article-footer-nav">
+                 <a href="../articles.html" class="link-styled">← Back to All Articles</a>
+             </nav>
+
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <!-- Identical footer content, update paths -->
+        <div class="container footer-container">
+            <div class="footer-logo">
+                <img src="../assets/logo/theory-house-logo.png" alt="" class="footer-logo-image"> Theory House
+            </div>
+            <nav class="footer-nav">
+               <a href="../index.html">Home</a> |
+               <a href="../articles.html">Articles</a> |
+               <a href="../community.html">Community</a> |
+               <a href="#">Privacy</a>
+            </nav>
+            <div class="footer-social">
+                <a href="#" aria-label="Discord Community"><img src="../assets/icons/discord-icon.svg" alt="Discord"></a>
+            </div>
+            <div class="footer-copyright">
+                © <span id="current-year"></span> Theory House. Built with foundational ideas.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Important: Make sure script path is correct -->
+    <script src="../assets/js/script.js"></script>
+    <!-- Add Prism.js or other syntax highlighting library here if needed -->
+</body>
+</html>
